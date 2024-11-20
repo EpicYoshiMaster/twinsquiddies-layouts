@@ -101,7 +101,7 @@ const OmnibarWrapper = styled.div`
   	display: flex;
   	flex-direction: row;
   	width: calc(100% - 40px);
-  	background-color: #f04888;
+  	background-color: var(--primary);
   	min-height: 0;
   	min-width: 0;
   	margin: 20px;

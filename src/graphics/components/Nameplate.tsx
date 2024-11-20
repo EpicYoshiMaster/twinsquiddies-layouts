@@ -181,7 +181,7 @@ const Pronouns = styled.div`
 	background-image: url('/bundles/twinsquiddies-layouts/images/CherrySquid.png');
 	background-size: contain;
 	background-repeat: no-repeat;
-	color: var(--contrast);
+	color: var(--commentary-pronouns);
 	font-size: 1.6rem;
 `;
 
