@@ -1,0 +1,30 @@
+:root {
+	--primary: #f04888;
+	--alt-primary: #f10059;
+
+	--contrast: #eae6f3;
+	--alt-contrast: #ffffff;
+
+	--secondary: #23eb00;
+
+	--commentary-text: #c40821;
+
+	--credits-text: #ffffff;
+	--credits-bg: #000000;
+}
+
+@font-face {
+	font-family: Splatoon;
+	src: url('../../fonts/project_paintball.otf');
+}
+
+body {
+  font-family: Splatoon;
+  margin: 0;
+}
+
+.monospace {
+  font-family: monospace;
+}
+
+* { box-sizing: border-box; }
