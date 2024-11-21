@@ -1,5 +1,6 @@
 import styled, { keyframes, css } from "styled-components";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
+import { OutlinedText } from "./OutlinedText";
 
 interface NameplateProps {
 	show: boolean;
@@ -8,6 +9,10 @@ interface NameplateProps {
 	tag?: string;
 	animationLength?: number;
 }
+
+const CommentatorOutline = [ { width: "10px", color: "var(--commentary-outline)" } ];
+
+const TagOutline = [ { width: "10px", color: "var(--commentary-tag-outline)" } ];
 
 export const Nameplate: React.FC<NameplateProps> = ({ show, name, pronouns, tag, animationLength }) => {
 
@@ -60,18 +65,20 @@ export const Nameplate: React.FC<NameplateProps> = ({ show, name, pronouns, tag,
 		$animLength={animationLength || 1000}
 		onAnimationEnd={(event) => { onAnimEnd(event.animationName); }}>
 			<Name>
-				{name}
+				<OutlinedText text={name || ""} outlines={CommentatorOutline} />
 			</Name>
 			{tag && (
 			<Tag>
-				{tag}
+				<OutlinedText text={tag} outlines={TagOutline} />
 			</Tag>
 			)}
 			{pronouns && (
 			<Pronouns>
 			{
 				pronounsSplit.map((item, index) => {
-					return <PronounsText key={index}>{item}</PronounsText>;
+					return <PronounsText key={index}>
+						{item}
+					</PronounsText>;
 				})
 			}
 			</Pronouns>
@@ -140,18 +147,15 @@ const NameplateBox = styled.div<{ $show: boolean, $visible: boolean, $active: bo
 	background-image: url('/bundles/twinsquiddies-layouts/images/TwiSqui_Banner.png');
 	background-size: contain;
 	background-repeat: no-repeat;
-	color: var(--commentary-text);
 
-	//${({$visible}) => $visible ? css`opacity: 1;` : css`opacity: 0;` };
+	${({$visible}) => $visible ? css`opacity: 1;` : css`opacity: 0;` };
 
 	${(props) => {
 		if(props.$active) {
-			return css``;
-			//return css`animation: ${props.$animLength}ms linear 0s ${props.$show ? ShowNameplate : HideNameplate} forwards;`	
+			return css`animation: ${props.$animLength}ms linear 0s ${props.$show ? ShowNameplate : HideNameplate} forwards;`	
 		}
 		else {
-			return css``;
-			//return css`animation: none;`
+			return css`animation: none;`
 		}
 	}}
 `;
@@ -160,6 +164,8 @@ const Name = styled.div`
 	position: relative;
 	width: 100%;
 	font-size: 3rem;
+
+	color: var(--commentary-text);
 `;
 
 const Pronouns = styled.div`
@@ -187,9 +193,12 @@ const Pronouns = styled.div`
 
 const Tag = styled.div`
 	position: relative;
+	margin-left: 15px;
 	width: 100%;
 	text-align: left;
 	font-size: 2.25rem;
+
+	color: var(--commentary-tag);
 `;
 
 const PronounsText = styled.div`

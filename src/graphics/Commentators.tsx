@@ -143,10 +143,12 @@ const LowerThirds = styled.div`
 `;
 
 const NameplateLeft = styled.div`
+	position: relative;
 	margin: 20px 100px 20px 200px;
 `;
 
 const NameplateRight = styled.div`
+	position: relative;
 	margin: 20px 200px 20px 100px;
 `;
 

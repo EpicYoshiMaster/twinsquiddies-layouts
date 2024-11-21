@@ -35,5 +35,7 @@ const Text = styled.div`
 
 const TextOutline = styled.div<{ $width: string, $color: string }>`
 	position: absolute;
+	width: 100%;
+	left: 0;
 	-webkit-text-stroke: ${({ $width }) => $width} ${({ $color }) => $color};
 `;

@@ -1,5 +1,7 @@
 :root {
 	--primary: #aad0dd;
+	/* Break Screen */
+
 	--break-title-text: #ea2c12;
 	--break-title-outline: #ffffff;
 
@@ -14,13 +16,35 @@
 	--break-socials-text: #29273d;
 	--break-socials-outline: #aad0dd;
 
+	/* Intermission & Omnibar */
+
+	--feed-large-color: #e68b8b;
+	--feed-large-border: #660033;
+
+	--feed-small-color: #e68b8b;
+	--feed-small-border: #660033;
+
+	--omnibar-color: #660033;
+	--omnibar-text: #ffffff;
+	--omnibar-divider: #ffffff;
+
+	/* Commentary */ 
+
+	--commentary-text: #af0b01;
+	--commentary-outline: #fecbc7;
+
+	--commentary-tag: #29273d;
+	--commentary-tag-outline: #aad0dd;
+
+	--commentary-pronouns: #ffffff;
+	/*--commentary-pronouns-outline: #000000;*/
+
 	--contrast: #4c4b99;
 	--alt-contrast: #ffffff;
 
 	--secondary: #659ac9;
 
-	--commentary-text: #c40821;
-	--commentary-pronouns: #eae6f3;
+	/* Credits */
 
 	--credits-text: #ffffff;
 	--credits-bg: #000000;

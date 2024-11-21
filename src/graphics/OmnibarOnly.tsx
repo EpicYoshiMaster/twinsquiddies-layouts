@@ -2,13 +2,11 @@ import React, { useState, useEffect, useMemo } from 'react';
 import styled from 'styled-components'
 import { createRoot } from 'react-dom/client';
 import { Omnibar } from './components/Omnibar';
-import { Background } from './components/Background';
 
 export function OmnibarOnly() {
 	return (
 		<StyledOmnibarOnly>
 			<Content>
-				<div />
 				<Omnibar />
 			</Content>
 		</StyledOmnibarOnly>
@@ -23,12 +21,14 @@ const StyledOmnibarOnly = styled.div`
 `;
 
 const Content = styled.div`
+	padding-bottom: 12px;
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	
 	width: 100%;
 	height: 100%;
-	
-	display: grid;
-	grid-template-rows: 0.85fr 0.15fr;
 `;
 
 const root = createRoot(document.getElementById('root')!);

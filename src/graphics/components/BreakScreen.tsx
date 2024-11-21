@@ -89,11 +89,9 @@ export const BreakScreen: React.FC<BreakScreenProps> = ({ message }) => {
 									</SocialsItem>
 								</SocialsArea>
 							</CarouselComponent>
-							
-
 						</SocialsColumn>
 						<SquidwestRow>
-							<Logo src="/bundles/twinsquiddies-layouts/images/SW_Logo.png" alt="SquidWest Logo" />
+							<Logo src="/bundles/twinsquiddies-layouts/images/SW_Logo_Red_bg.png" alt="SquidWest Logo" />
 						</SquidwestRow>
 					</Columns>
 				</Rows>

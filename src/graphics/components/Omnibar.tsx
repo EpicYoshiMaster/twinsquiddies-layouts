@@ -72,7 +72,21 @@ export const Omnibar: React.FC = () => {
 				</TourneyWrapper>
 			</TextOmnibarItem>
             <CarouselWrapper $border={true}>
-				<CarouselComponent speed={5000} transitionSpeed={1000} indexRelative={3}>
+				<CarouselComponent speed={5000} transitionSpeed={1000} indexRelative={7}>
+					<CarouselRow>
+						<LogoText>Follow Twin Squiddies!</LogoText>
+					</CarouselRow>
+					<CarouselRow>
+                        <StyledButterfly />
+                        <LogoText>@twinsquiddies.bsky.social</LogoText>
+					</CarouselRow>
+					<CarouselRow>
+                        <StyledDiscordLogo />
+                        <LogoText>discord.gg/LCL</LogoText>
+					</CarouselRow>
+					<CarouselRow>
+						<LogoText>Follow SquidWest!</LogoText>
+					</CarouselRow>
 					<CarouselRow>
                         <StyledYoutubeLogo />
                         <LogoText>{socials ? socials.youtube : ""}</LogoText>
@@ -91,7 +105,7 @@ export const Omnibar: React.FC = () => {
 					</CarouselRow>
 				</CarouselComponent>
 			</CarouselWrapper>
-            <OmnibarElement as="img" src='/bundles/twinsquiddies-layouts/images/SW_Logo.png' alt="SquidWest Logo" />
+            <OmnibarElement as="img" src='/bundles/twinsquiddies-layouts/images/SW_Logo_Red_bg.png' alt="SquidWest Logo" />
 		</OmnibarWrapper>
     );
 }
@@ -101,12 +115,9 @@ const OmnibarWrapper = styled.div`
   	display: flex;
   	flex-direction: row;
   	width: calc(100% - 40px);
-  	background-color: var(--primary);
-  	min-height: 0;
-  	min-width: 0;
-  	margin: 20px;
-
-	font-family: Splatoon;
+  	background-color: var(--omnibar-color);
+	height: 122px;
+  	margin: 10px 20px;
 `;
 
 const OmnibarItem = styled.div<{ $show: boolean }>`
@@ -121,9 +132,9 @@ const TextOmnibarItem = styled(OmnibarItem)<{ $maxWidth: string }>`
 const OmnibarElement = styled.div<{$border?: boolean}>`
 	position: relative;
 	padding: 10px;
-	color: var(--alt-contrast);
+	color: var(--omnibar-text);
 	font-size: 20pt;
-	border-right: ${props => props.$border ? '5px solid var(--contrast)' : ''};
+	border-right: ${props => props.$border ? '5px solid var(--omnibar-divider)' : ''};
 `;
 
 const TimeDate = styled(OmnibarElement)`
@@ -139,14 +150,12 @@ const TimeDate = styled(OmnibarElement)`
 const TimeDisplay = styled.div`
 	position: relative;
 	margin: auto;
-	color: #ffffff;
 	font-size: 35pt;
 `;
 
 const DateDisplay = styled.div`
 	position: relative;
 	margin: auto;
-	color: #ffffff;
 	font-size: 20pt;
 `;
 

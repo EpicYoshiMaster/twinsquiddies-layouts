@@ -17,6 +17,7 @@ const StyledBackground = styled.div`
 	width: 100%;
 	height: 100%;
 	padding: 0px;
+	margin: 0px;
 `;
 
 const StyledVideo = styled.video`
@@ -24,4 +25,5 @@ const StyledVideo = styled.video`
 	width: 100%;
 	height: 100%;
 	object-fit: fill;
+	vertical-align: top;
 `;

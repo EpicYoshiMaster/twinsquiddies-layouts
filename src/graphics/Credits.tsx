@@ -45,7 +45,7 @@ export function Credits() {
 	return (
         <StyledCredits>
             <Content>
-                <CarouselComponent startIndex={5} speed={10000} transitionSpeed={3000} once={true}>
+                <CarouselComponent speed={10000} transitionSpeed={3000} once={true}>
                     <CreditsRow>
                         <TitleText>{currentEvent.name} {currentEvent.number > 0 ? '#' + currentEvent.number  : ''}</TitleText>
                     </CreditsRow>
@@ -64,7 +64,7 @@ export function Credits() {
                     {staffTeam.length > 0 && (<CreditsRow>
                         <LogoRow>
                             <HeaderText>SquidWest TOs and Staff</HeaderText>
-                            <img src="/bundles/twinsquiddies-layouts/images/SW_Logo_bg.png" />
+                            <img src="/bundles/twinsquiddies-layouts/images/SW_Logo_Red_bg.png" />
                         </LogoRow>
                         {
                             staffTeam.map((name, index) => {
@@ -86,6 +86,7 @@ export function Credits() {
                         </CreditsColumns>
                     </CreditsRow>
                     <CreditsRow>
+                        <EventLogo src="/bundles/twinsquiddies-layouts/images/TwinSquiddiesLogo.png" />
                         <CreditsNameRow title="Production" names={["MissPixiSix", "iMADgamerII", "Lilalychi", "Bits", "EpicYoshiMaster"]} />
                     </CreditsRow>
                     <CreditsRow>
