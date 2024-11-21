@@ -1,11 +1,23 @@
 :root {
-	--primary: #f04888;
-	--alt-primary: #f10059;
+	--primary: #aad0dd;
+	--break-title-text: #ea2c12;
+	--break-title-outline: #ffffff;
 
-	--contrast: #eae6f3;
+	--break-subtitle-text: #4c4b99;
+	--break-subtitle-outline: #aad0dd;
+
+	--break-socials-title: #af0b01;
+	--break-socials-title-outline: #fecbc7;
+
+	--break-socials-icons: #aad0dd;
+
+	--break-socials-text: #29273d;
+	--break-socials-outline: #aad0dd;
+
+	--contrast: #4c4b99;
 	--alt-contrast: #ffffff;
 
-	--secondary: #23eb00;
+	--secondary: #659ac9;
 
 	--commentary-text: #c40821;
 	--commentary-pronouns: #eae6f3;
@@ -19,8 +31,13 @@
 	src: url('../../fonts/project_paintball.otf');
 }
 
+@font-face {
+	font-family: Genty Sans;
+	src: url('../../fonts/genty-sans-regular.otf');
+}
+
 body {
-  font-family: Splatoon;
+  font-family: Genty Sans;
   margin: 0;
 }
 

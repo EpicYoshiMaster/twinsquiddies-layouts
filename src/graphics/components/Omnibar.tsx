@@ -105,6 +105,8 @@ const OmnibarWrapper = styled.div`
   	min-height: 0;
   	min-width: 0;
   	margin: 20px;
+
+	font-family: Splatoon;
 `;
 
 const OmnibarItem = styled.div<{ $show: boolean }>`
