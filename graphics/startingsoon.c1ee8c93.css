@@ -1,0 +1,53 @@
+:root {
+  --primary: #aad0dd;
+  --break-title-text: #ea2c12;
+  --break-title-outline: #fff;
+  --break-subtitle-text: #4c4b99;
+  --break-subtitle-outline: #aad0dd;
+  --break-socials-title: #af0b01;
+  --break-socials-title-outline: #fecbc7;
+  --break-socials-icons: #aad0dd;
+  --break-socials-text: #29273d;
+  --break-socials-outline: #aad0dd;
+  --feed-large-color: #e68b8b;
+  --feed-large-border: #603;
+  --feed-small-color: #e68b8b;
+  --feed-small-border: #603;
+  --omnibar-color: #603;
+  --omnibar-text: #fff;
+  --omnibar-divider: #fff;
+  --commentary-text: #af0b01;
+  --commentary-outline: #fecbc7;
+  --commentary-tag: #29273d;
+  --commentary-tag-outline: #aad0dd;
+  --commentary-pronouns: #fff;
+  --contrast: #4c4b99;
+  --alt-contrast: #fff;
+  --secondary: #659ac9;
+  --credits-text: #fff;
+  --credits-bg: #000;
+}
+
+@font-face {
+  font-family: Splatoon;
+  src: url("project_paintball.d41869c1.otf");
+}
+
+@font-face {
+  font-family: Genty Sans;
+  src: url("genty-sans-regular.673f71b3.otf");
+}
+
+body {
+  margin: 0;
+  font-family: Genty Sans;
+}
+
+.monospace {
+  font-family: monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+/*# sourceMappingURL=startingsoon.c1ee8c93.css.map */
