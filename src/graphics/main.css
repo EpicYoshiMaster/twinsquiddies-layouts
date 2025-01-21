@@ -24,9 +24,17 @@
 	--feed-small-color: #e68b8b;
 	--feed-small-border: #660033;
 
+	--omnibar-border: #3d0521;
 	--omnibar-color: #660033;
 	--omnibar-text: #ffffff;
 	--omnibar-divider: #ffffff;
+
+	--teams-color: #660033;
+	--teams-border: #3d0521;
+	--teams-text: #ffffff;
+	--teams-inner: #702d47;
+	--teams-score-text: #ffffff;
+	--teams-score-inner: #660033;
 
 	/* Commentary */ 
 

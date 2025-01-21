@@ -117,6 +117,8 @@ const OmnibarWrapper = styled.div`
   	width: calc(100% - 40px);
   	background-color: var(--omnibar-color);
 	height: 122px;
+	border: 8px solid var(--omnibar-border);
+	border-radius: 0.5rem;
   	margin: 10px 20px;
 `;
 
