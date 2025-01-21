@@ -53,7 +53,7 @@ export const BreakScreen: React.FC<BreakScreenProps> = ({ message }) => {
 					</EventSection>
 					<Columns>
 						<SocialsColumn>
-							<CarouselComponent speed={10000} transitionSpeed={2000} indexRelative={1}>
+							<CarouselComponent speed={10000} transitionSpeed={2000}>
 								<SocialsArea>
 									<SocialsTitle>
 										<OutlinedText text="Follow Twin Squiddies!" outlines={SocialTitleOutline} />

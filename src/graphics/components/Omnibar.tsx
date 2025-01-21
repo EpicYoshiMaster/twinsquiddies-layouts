@@ -72,7 +72,7 @@ export const Omnibar: React.FC = () => {
 				</TourneyWrapper>
 			</TextOmnibarItem>
             <CarouselWrapper $border={true}>
-				<CarouselComponent speed={5000} transitionSpeed={1000} indexRelative={7}>
+				<CarouselComponent speed={7000} transitionSpeed={1000}>
 					<CarouselRow>
 						<LogoText>Follow Twin Squiddies!</LogoText>
 					</CarouselRow>

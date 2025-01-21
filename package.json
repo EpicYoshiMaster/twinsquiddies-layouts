@@ -53,6 +53,12 @@
         "width": 1920,
         "height": 1080,
         "singleInstance": false
+      },
+      {
+        "file": "game.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
       }
     ],
     "mount": [
@@ -92,10 +98,12 @@
     "@phosphor-icons/react": "^2.1.7",
     "@types/react": "*",
     "@types/react-dom": "*",
+    "fontfaceobserver": "^2.3.0",
     "react": "*",
     "react-dom": "*",
     "styled-components": "^6.1.13",
-    "ts-node": "*"
+    "ts-node": "*",
+    "type-fest": "^4.31.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.25.9",
@@ -105,6 +113,7 @@
     "@parcel/core": "*",
     "@parcel/reporter-cli": "*",
     "@parcel/validator-typescript": "*",
+    "@types/fontfaceobserver": "^2.1.3",
     "@types/node": "^18",
     "babel-plugin-styled-components": "^2.1.4",
     "concurrently": "*",
