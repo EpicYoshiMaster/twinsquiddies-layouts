@@ -24,9 +24,17 @@
 	--feed-small-color: #e68b8b;
 	--feed-small-border: #660033;
 
+	--omnibar-border: #3d0521;
 	--omnibar-color: #660033;
 	--omnibar-text: #ffffff;
 	--omnibar-divider: #ffffff;
+
+	--teams-color: #660033;
+	--teams-border: #3d0521;
+	--teams-text: #ffffff;
+	--teams-inner: #702d47;
+	--teams-score-text: #ffffff;
+	--teams-score-inner: #660033;
 
 	/* Commentary */ 
 
@@ -44,10 +52,31 @@
 
 	--secondary: #659ac9;
 
+	/* Game */
+	--game-title-text: #ffffff;
+	--game-title-bg: #ea2c12;
+	--game-main-text: #ffffff;
+	--game-main-bg: #4c4b99;
+	--game-sub-text: #ffffff;
+	--game-sub-bg: #cc0d03;
+	--game-border: #ffffff;
+
 	/* Credits */
 
 	--credits-text: #ffffff;
 	--credits-bg: #000000;
+
+	--credits-h1: #ff3015;
+	--credits-h1-outline: #fecbc7;
+
+	--credits-h2: #af0b01;
+	--credits-h2-outline: #fecbc7;
+
+	--credits-p-large: #4c4b99;
+	--credits-p-large-outline: #aad0dd;
+
+	--credits-p: #29273d;
+	--credits-p-outline: #aad0dd;
 }
 
 @font-face {

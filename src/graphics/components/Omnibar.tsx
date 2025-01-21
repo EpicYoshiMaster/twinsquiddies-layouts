@@ -72,7 +72,7 @@ export const Omnibar: React.FC = () => {
 				</TourneyWrapper>
 			</TextOmnibarItem>
             <CarouselWrapper $border={true}>
-				<CarouselComponent speed={5000} transitionSpeed={1000} indexRelative={7}>
+				<CarouselComponent speed={7000} transitionSpeed={1000}>
 					<CarouselRow>
 						<LogoText>Follow Twin Squiddies!</LogoText>
 					</CarouselRow>
@@ -117,6 +117,8 @@ const OmnibarWrapper = styled.div`
   	width: calc(100% - 40px);
   	background-color: var(--omnibar-color);
 	height: 122px;
+	border: 8px solid var(--omnibar-border);
+	border-radius: 0.5rem;
   	margin: 10px 20px;
 `;
 

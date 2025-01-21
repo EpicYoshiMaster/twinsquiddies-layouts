@@ -3,8 +3,23 @@ import styled from 'styled-components'
 import { createRoot } from 'react-dom/client';
 import { Omnibar } from './components/Omnibar';
 import { Background } from './components/Background';
+import { useReplicant } from '@nodecg/react-hooks';
+import { MatchData } from 'schemas';
+import { TeamScoreBox } from './components/TeamScoreBox';
 
 export function Intermission() {
+	const [matchData, setMatchData] = useReplicant<MatchData>('match', { 
+		bundle: 'squidwest-layout-controls',
+		defaultValue: { 
+			matchInfo: "Round 1",
+			teamA: "Team A",
+			teamB: "Team B",
+			scoreA: 0,
+			scoreB: 0,
+			matchColor: { index: -1, name: "Unknown", teamA: "#ffffff", teamB: "#ffffff" },
+			swapColor: false
+		}
+	});
 
 	return (
 		<StyledIntermission>
@@ -15,7 +30,9 @@ export function Intermission() {
 					<LargeFeed />
 				</TopRow>
 				<MiddleRow>
+					<TeamScoreBox team={matchData?.teamA || ""} score={matchData?.scoreA || 0} left={true} />
 					<SmallFeed />
+					<TeamScoreBox team={matchData?.teamB || ""} score={matchData?.scoreB || 0} left={false} />
 				</MiddleRow>
 				<Omnibar />
 			</Content>
@@ -62,6 +79,7 @@ const LargeFeed = styled.div`
 	box-sizing: content-box;
 
 	border: 8px solid var(--feed-large-border);
+	border-radius: 0.5rem;
 	background-color: var(--feed-large-color);
 `;
 
@@ -71,6 +89,7 @@ const SmallFeed = styled.div`
 	box-sizing: content-box;
 
 	border: 8px solid var(--feed-small-border);
+	border-radius: 0.5rem;
 	background-color: var(--feed-small-color);
 `;
 
