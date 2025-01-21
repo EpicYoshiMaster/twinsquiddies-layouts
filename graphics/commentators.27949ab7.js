@@ -513,7 +513,7 @@ const PronounsText = (0, _styledComponentsDefault.default).div.withConfig({
     ""
 ]);
 
-},{"styled-components":"9xpRL","react":"bH1AQ","@parcel/transformer-js/src/esmodule-helpers.js":"hvLRG","./OutlinedText":"1O3pZ"}],"1O3pZ":[function(require,module,exports) {
+},{"styled-components":"9xpRL","react":"bH1AQ","./OutlinedText":"1O3pZ","@parcel/transformer-js/src/esmodule-helpers.js":"hvLRG"}],"1O3pZ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "OutlinedText", ()=>OutlinedText);

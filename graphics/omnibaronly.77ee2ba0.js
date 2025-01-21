@@ -372,9 +372,8 @@ const Omnibar = ()=>{
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _carouselComponent.CarouselComponent), {
-        speed: 5000,
+        speed: 7000,
         transitionSpeed: 1000,
-        indexRelative: 7,
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
             lineNumber: 75,
@@ -551,7 +550,7 @@ const OmnibarWrapper = (0, _styledComponentsDefault.default).div.withConfig({
     displayName: "Omnibar__OmnibarWrapper",
     componentId: "sc-18jg5sb-0"
 })([
-    "position:relative;display:flex;flex-direction:row;width:calc(100% - 40px);background-color:var(--omnibar-color);height:122px;margin:10px 20px;"
+    "position:relative;display:flex;flex-direction:row;width:calc(100% - 40px);background-color:var(--omnibar-color);height:122px;border:8px solid var(--omnibar-border);border-radius:0.5rem;margin:10px 20px;"
 ]);
 const OmnibarItem = (0, _styledComponentsDefault.default).div.withConfig({
     displayName: "Omnibar__OmnibarItem",
@@ -677,7 +676,92 @@ const LogoText = (0, _styledComponentsDefault.default).div.withConfig({
     "font-size:35pt;"
 ]);
 
-},{"react":"bH1AQ","styled-components":"9xpRL","./CarouselComponent":"3ZV6n","@phosphor-icons/react":"h9z2e","@nodecg/react-hooks":"audz3","../../helpers/utils":"2gdT3","@parcel/transformer-js/src/esmodule-helpers.js":"hvLRG"}],"2gdT3":[function(require,module,exports) {
+},{"react":"bH1AQ","styled-components":"9xpRL","./CarouselComponent":"3ZV6n","@phosphor-icons/react":"h9z2e","@nodecg/react-hooks":"audz3","../../helpers/utils":"2gdT3","@parcel/transformer-js/src/esmodule-helpers.js":"hvLRG"}],"3ZV6n":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CarouselComponent", ()=>CarouselComponent);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _styledComponents = require("styled-components");
+var _styledComponentsDefault = parcelHelpers.interopDefault(_styledComponents);
+const DEFAULT_SPEED = 5000;
+const DEFAULT_TRANSITION_SPEED = 1000;
+const CarouselComponent = ({ children, playing = true, speed, transitionSpeed, once, startIndex })=>{
+    const [carouselIndex, setCarouselIndex] = (0, _react.useState)(startIndex || 0);
+    const carouselIntervalId = (0, _react.useRef)(null);
+    const activeCarouselIndexRef = (0, _react.useRef)(startIndex || 0);
+    const childElements = (0, _react.useMemo)(()=>{
+        return (0, _reactDefault.default).Children.toArray(children);
+    }, [
+        children
+    ]);
+    (0, _react.useEffect)(()=>{
+        if (playing && childElements.length > 1) {
+            //Force it to the last element
+            if (activeCarouselIndexRef.current >= childElements.length) {
+                setCarouselIndex(childElements.length - 1);
+                activeCarouselIndexRef.current = childElements.length - 1;
+            }
+            //Function ID from Set Interval, to clear it later
+            carouselIntervalId.current = window.setInterval(()=>{
+                if (!playing) return;
+                if (once && activeCarouselIndexRef.current + 1 >= childElements.length) {
+                    if (carouselIntervalId.current) clearInterval(carouselIntervalId.current);
+                    return;
+                }
+                const nextIndex = (activeCarouselIndexRef.current + 1) % childElements.length;
+                setCarouselIndex(nextIndex);
+                activeCarouselIndexRef.current = nextIndex;
+            }, speed || DEFAULT_SPEED);
+        } else if (playing) {
+            setCarouselIndex(0);
+            activeCarouselIndexRef.current = 0;
+        }
+        return ()=>{
+            if (carouselIntervalId.current) clearInterval(carouselIntervalId.current);
+        };
+    }, [
+        playing,
+        childElements.length
+    ]);
+    return /*#__PURE__*/ (0, _reactDefault.default).createElement(CarouselContainer, {
+        __source: {
+            fileName: "src/graphics/components/CarouselComponent.tsx",
+            lineNumber: 54,
+            columnNumber: 10
+        },
+        __self: undefined
+    }, childElements.map((child, index, array)=>/*#__PURE__*/ (0, _reactDefault.default).createElement(CarouselItem, {
+            key: index,
+            $active: index === carouselIndex,
+            $isRelative: index === array.length - 1,
+            speed: (transitionSpeed ? transitionSpeed : DEFAULT_TRANSITION_SPEED) / 2,
+            __source: {
+                fileName: "src/graphics/components/CarouselComponent.tsx",
+                lineNumber: 55,
+                columnNumber: 57
+            },
+            __self: undefined
+        }, child)));
+};
+const CarouselContainer = (0, _styledComponentsDefault.default).div.withConfig({
+    displayName: "CarouselComponent__CarouselContainer",
+    componentId: "sc-1ak0tmm-0"
+})([
+    "position:relative;width:100%;height:100%;"
+]);
+const CarouselItem = (0, _styledComponentsDefault.default).div.withConfig({
+    displayName: "CarouselComponent__CarouselItem",
+    componentId: "sc-1ak0tmm-1"
+})([
+    "position:",
+    ";max-height:100%;width:100%;height:100%;opacity:",
+    ";transition:opacity ",
+    "ms linear;transition-delay:",
+    "ms;"
+], (props)=>props.$isRelative ? `relative` : `absolute`, (props)=>props.$active ? 1 : 0, (props)=>props.speed, (props)=>props.$active ? props.speed : 0);
+
+},{"react":"bH1AQ","styled-components":"9xpRL","@parcel/transformer-js/src/esmodule-helpers.js":"hvLRG"}],"2gdT3":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "formatTimeHMSC", ()=>formatTimeHMSC);
