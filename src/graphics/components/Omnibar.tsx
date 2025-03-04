@@ -2,9 +2,10 @@ import React, { useState, useEffect, useMemo } from 'react'
 import styled from 'styled-components'
 import { CarouselComponent } from './CarouselComponent';
 import { YoutubeLogo, DiscordLogo, TwitterLogo, Butterfly } from "@phosphor-icons/react";
-import { EventData, Socials, EventInfo } from 'schemas';
+import { EventData, EventInfo } from 'schemas/eventData';
+import { Socials } from 'schemas/socials';
 import { useReplicant } from '@nodecg/react-hooks';
-import { IntermissionData } from 'schemas';
+import { IntermissionData } from 'schemas/intermissionData';
 import { formatDateHM, formatDateMDY } from '../../helpers/utils'
 
 export const Omnibar: React.FC = () => {
