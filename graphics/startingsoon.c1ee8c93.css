@@ -1,5 +1,4 @@
 :root {
-  --primary: #aad0dd;
   --break-title-text: #ea2c12;
   --break-title-outline: #fff;
   --break-subtitle-text: #4c4b99;
@@ -28,9 +27,6 @@
   --commentary-tag: #29273d;
   --commentary-tag-outline: #aad0dd;
   --commentary-pronouns: #fff;
-  --contrast: #4c4b99;
-  --alt-contrast: #fff;
-  --secondary: #659ac9;
   --game-title-text: #fff;
   --game-title-bg: #ea2c12;
   --game-main-text: #fff;

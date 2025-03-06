@@ -249,7 +249,7 @@ const Omnibar = ()=>{
     return /*#__PURE__*/ (0, _reactDefault.default).createElement(OmnibarWrapper, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 41,
+            lineNumber: 42,
             columnNumber: 10
         },
         __self: undefined
@@ -257,7 +257,7 @@ const Omnibar = ()=>{
         $show: intermissionData ? intermissionData.showTime : true,
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 42,
+            lineNumber: 43,
             columnNumber: 4
         },
         __self: undefined
@@ -265,21 +265,21 @@ const Omnibar = ()=>{
         $border: true,
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 43,
+            lineNumber: 44,
             columnNumber: 5
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(TimeDisplay, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 44,
+            lineNumber: 45,
             columnNumber: 6
         },
         __self: undefined
     }, (0, _utils.formatDateHM)(memoTime)), /*#__PURE__*/ (0, _reactDefault.default).createElement(DateDisplay, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 47,
+            lineNumber: 48,
             columnNumber: 6
         },
         __self: undefined
@@ -287,7 +287,7 @@ const Omnibar = ()=>{
         $show: intermissionData ? intermissionData.showEvent : true,
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 52,
+            lineNumber: 53,
             columnNumber: 4
         },
         __self: undefined
@@ -295,7 +295,7 @@ const Omnibar = ()=>{
         $border: true,
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 53,
+            lineNumber: 54,
             columnNumber: 5
         },
         __self: undefined
@@ -304,14 +304,14 @@ const Omnibar = ()=>{
         alt: "Twin Squiddies Logo",
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 54,
+            lineNumber: 55,
             columnNumber: 6
         },
         __self: undefined
     }), currentEvent.number > 0 && /*#__PURE__*/ (0, _reactDefault.default).createElement(EventNumberText, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 55,
+            lineNumber: 56,
             columnNumber: 34
         },
         __self: undefined
@@ -320,7 +320,7 @@ const Omnibar = ()=>{
         $maxWidth: "24rem",
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 60,
+            lineNumber: 61,
             columnNumber: 4
         },
         __self: undefined
@@ -328,14 +328,14 @@ const Omnibar = ()=>{
         $border: true,
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 61,
+            lineNumber: 62,
             columnNumber: 38
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(LocationText, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 62,
+            lineNumber: 63,
             columnNumber: 6
         },
         __self: undefined
@@ -344,7 +344,7 @@ const Omnibar = ()=>{
         $maxWidth: "20rem",
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 67,
+            lineNumber: 68,
             columnNumber: 4
         },
         __self: undefined
@@ -352,14 +352,14 @@ const Omnibar = ()=>{
         $border: true,
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 68,
+            lineNumber: 69,
             columnNumber: 5
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(TourneyPlaceholder, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 69,
+            lineNumber: 70,
             columnNumber: 6
         },
         __self: undefined
@@ -367,7 +367,7 @@ const Omnibar = ()=>{
         $border: true,
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 74,
+            lineNumber: 75,
             columnNumber: 13
         },
         __self: undefined
@@ -376,161 +376,161 @@ const Omnibar = ()=>{
         transitionSpeed: 1000,
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 75,
+            lineNumber: 76,
             columnNumber: 5
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(CarouselRow, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 76,
+            lineNumber: 77,
             columnNumber: 6
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(LogoText, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 77,
+            lineNumber: 78,
             columnNumber: 7
         },
         __self: undefined
     }, "Follow Twin Squiddies!")), /*#__PURE__*/ (0, _reactDefault.default).createElement(CarouselRow, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 79,
+            lineNumber: 80,
             columnNumber: 6
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(StyledButterfly, {
-        __source: {
-            fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 80,
-            columnNumber: 25
-        },
-        __self: undefined
-    }), /*#__PURE__*/ (0, _reactDefault.default).createElement(LogoText, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
             lineNumber: 81,
             columnNumber: 25
         },
         __self: undefined
+    }), /*#__PURE__*/ (0, _reactDefault.default).createElement(LogoText, {
+        __source: {
+            fileName: "src/graphics/components/Omnibar.tsx",
+            lineNumber: 82,
+            columnNumber: 25
+        },
+        __self: undefined
     }, "@twinsquiddies.bsky.social")), /*#__PURE__*/ (0, _reactDefault.default).createElement(CarouselRow, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 83,
+            lineNumber: 84,
             columnNumber: 6
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(StyledDiscordLogo, {
-        __source: {
-            fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 84,
-            columnNumber: 25
-        },
-        __self: undefined
-    }), /*#__PURE__*/ (0, _reactDefault.default).createElement(LogoText, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
             lineNumber: 85,
             columnNumber: 25
         },
         __self: undefined
+    }), /*#__PURE__*/ (0, _reactDefault.default).createElement(LogoText, {
+        __source: {
+            fileName: "src/graphics/components/Omnibar.tsx",
+            lineNumber: 86,
+            columnNumber: 25
+        },
+        __self: undefined
     }, "discord.gg/LCL")), /*#__PURE__*/ (0, _reactDefault.default).createElement(CarouselRow, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 87,
+            lineNumber: 88,
             columnNumber: 6
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(LogoText, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 88,
+            lineNumber: 89,
             columnNumber: 7
         },
         __self: undefined
     }, "Follow SquidWest!")), /*#__PURE__*/ (0, _reactDefault.default).createElement(CarouselRow, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 90,
+            lineNumber: 91,
             columnNumber: 6
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(StyledYoutubeLogo, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 91,
+            lineNumber: 92,
             columnNumber: 25
         },
         __self: undefined
     }), /*#__PURE__*/ (0, _reactDefault.default).createElement(LogoText, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 92,
+            lineNumber: 93,
             columnNumber: 25
         },
         __self: undefined
     }, socials ? socials.youtube : "")), /*#__PURE__*/ (0, _reactDefault.default).createElement(CarouselRow, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 94,
+            lineNumber: 95,
             columnNumber: 6
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(StyledTwitterLogo, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 95,
+            lineNumber: 96,
             columnNumber: 25
         },
         __self: undefined
     }), /*#__PURE__*/ (0, _reactDefault.default).createElement(LogoText, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 96,
+            lineNumber: 97,
             columnNumber: 25
         },
         __self: undefined
     }, socials ? socials.twitter : "")), /*#__PURE__*/ (0, _reactDefault.default).createElement(CarouselRow, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 98,
+            lineNumber: 99,
             columnNumber: 6
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(StyledButterfly, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 99,
+            lineNumber: 100,
             columnNumber: 25
         },
         __self: undefined
     }), /*#__PURE__*/ (0, _reactDefault.default).createElement(LogoText, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 100,
+            lineNumber: 101,
             columnNumber: 25
         },
         __self: undefined
     }, socials ? socials.bluesky : "")), /*#__PURE__*/ (0, _reactDefault.default).createElement(CarouselRow, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 102,
+            lineNumber: 103,
             columnNumber: 6
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(StyledDiscordLogo, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 103,
+            lineNumber: 104,
             columnNumber: 25
         },
         __self: undefined
     }), /*#__PURE__*/ (0, _reactDefault.default).createElement(LogoText, {
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 104,
+            lineNumber: 105,
             columnNumber: 25
         },
         __self: undefined
@@ -540,7 +540,7 @@ const Omnibar = ()=>{
         alt: "SquidWest Logo",
         __source: {
             fileName: "src/graphics/components/Omnibar.tsx",
-            lineNumber: 108,
+            lineNumber: 109,
             columnNumber: 13
         },
         __self: undefined

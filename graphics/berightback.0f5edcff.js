@@ -245,42 +245,42 @@ const BreakScreen = ({ message })=>{
     return /*#__PURE__*/ (0, _reactDefault.default).createElement(StyledBreakScreen, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 48,
+            lineNumber: 49,
             columnNumber: 10
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _background.Background), {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 49,
+            lineNumber: 50,
             columnNumber: 4
         },
         __self: undefined
     }), /*#__PURE__*/ (0, _reactDefault.default).createElement(Content, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 50,
+            lineNumber: 51,
             columnNumber: 4
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(Rows, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 51,
+            lineNumber: 52,
             columnNumber: 5
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(EventSection, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 52,
+            lineNumber: 53,
             columnNumber: 6
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(TitleText, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 53,
+            lineNumber: 54,
             columnNumber: 7
         },
         __self: undefined
@@ -289,14 +289,14 @@ const BreakScreen = ({ message })=>{
         outlines: TitleOutline,
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 54,
+            lineNumber: 55,
             columnNumber: 8
         },
         __self: undefined
     })), /*#__PURE__*/ (0, _reactDefault.default).createElement(SubtitleText, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 56,
+            lineNumber: 57,
             columnNumber: 7
         },
         __self: undefined
@@ -305,21 +305,21 @@ const BreakScreen = ({ message })=>{
         outlines: SubtitleOutline,
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 57,
+            lineNumber: 58,
             columnNumber: 8
         },
         __self: undefined
     }))), /*#__PURE__*/ (0, _reactDefault.default).createElement(Columns, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 60,
+            lineNumber: 61,
             columnNumber: 6
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsColumn, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 61,
+            lineNumber: 62,
             columnNumber: 7
         },
         __self: undefined
@@ -328,21 +328,21 @@ const BreakScreen = ({ message })=>{
         transitionSpeed: 2000,
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 62,
+            lineNumber: 63,
             columnNumber: 8
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsArea, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 63,
+            lineNumber: 64,
             columnNumber: 9
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsTitle, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 64,
+            lineNumber: 65,
             columnNumber: 10
         },
         __self: undefined
@@ -351,21 +351,21 @@ const BreakScreen = ({ message })=>{
         outlines: SocialTitleOutline,
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 65,
+            lineNumber: 66,
             columnNumber: 11
         },
         __self: undefined
     })), /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsItem, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 67,
+            lineNumber: 68,
             columnNumber: 10
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _react1.Butterfly), {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 68,
+            lineNumber: 69,
             columnNumber: 11
         },
         __self: undefined
@@ -374,21 +374,21 @@ const BreakScreen = ({ message })=>{
         outlines: SocialTextOutline,
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 69,
+            lineNumber: 70,
             columnNumber: 11
         },
         __self: undefined
     })), /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsItem, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 71,
+            lineNumber: 72,
             columnNumber: 10
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _react1.DiscordLogo), {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 72,
+            lineNumber: 73,
             columnNumber: 11
         },
         __self: undefined
@@ -397,21 +397,21 @@ const BreakScreen = ({ message })=>{
         outlines: SocialTextOutline,
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 73,
+            lineNumber: 74,
             columnNumber: 11
         },
         __self: undefined
     }))), /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsArea, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 76,
+            lineNumber: 77,
             columnNumber: 9
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsTitle, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 77,
+            lineNumber: 78,
             columnNumber: 10
         },
         __self: undefined
@@ -420,21 +420,21 @@ const BreakScreen = ({ message })=>{
         outlines: SocialTitleOutline,
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 78,
+            lineNumber: 79,
             columnNumber: 11
         },
         __self: undefined
     })), /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsItem, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 80,
+            lineNumber: 81,
             columnNumber: 10
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _react1.YoutubeLogo), {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 81,
+            lineNumber: 82,
             columnNumber: 11
         },
         __self: undefined
@@ -443,21 +443,21 @@ const BreakScreen = ({ message })=>{
         outlines: SocialTextOutline,
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 82,
+            lineNumber: 83,
             columnNumber: 11
         },
         __self: undefined
     })), /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsItem, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 84,
+            lineNumber: 85,
             columnNumber: 10
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _react1.TwitterLogo), {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 85,
+            lineNumber: 86,
             columnNumber: 11
         },
         __self: undefined
@@ -466,21 +466,21 @@ const BreakScreen = ({ message })=>{
         outlines: SocialTextOutline,
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 86,
+            lineNumber: 87,
             columnNumber: 11
         },
         __self: undefined
     })), /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsItem, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 88,
+            lineNumber: 89,
             columnNumber: 10
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _react1.Butterfly), {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 89,
+            lineNumber: 90,
             columnNumber: 11
         },
         __self: undefined
@@ -489,21 +489,21 @@ const BreakScreen = ({ message })=>{
         outlines: SocialTextOutline,
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 90,
+            lineNumber: 91,
             columnNumber: 11
         },
         __self: undefined
     })), /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsItem, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 92,
+            lineNumber: 93,
             columnNumber: 10
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _react1.DiscordLogo), {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 93,
+            lineNumber: 94,
             columnNumber: 11
         },
         __self: undefined
@@ -512,14 +512,14 @@ const BreakScreen = ({ message })=>{
         outlines: SocialTextOutline,
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 94,
+            lineNumber: 95,
             columnNumber: 11
         },
         __self: undefined
     }))))), /*#__PURE__*/ (0, _reactDefault.default).createElement(SquidwestRow, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 99,
+            lineNumber: 100,
             columnNumber: 7
         },
         __self: undefined
@@ -528,7 +528,7 @@ const BreakScreen = ({ message })=>{
         alt: "SquidWest Logo",
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 100,
+            lineNumber: 101,
             columnNumber: 8
         },
         __self: undefined

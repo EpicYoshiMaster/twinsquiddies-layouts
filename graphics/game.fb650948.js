@@ -232,14 +232,14 @@ function Game() {
     return /*#__PURE__*/ (0, _reactDefault.default).createElement(StyledOmnibarOnly, {
         __source: {
             fileName: "src/graphics/Game.tsx",
-            lineNumber: 80,
+            lineNumber: 81,
             columnNumber: 10
         },
         __self: this
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(Content, {
         __source: {
             fileName: "src/graphics/Game.tsx",
-            lineNumber: 81,
+            lineNumber: 82,
             columnNumber: 4
         },
         __self: this
@@ -247,14 +247,14 @@ function Game() {
         $show: showScoreboard,
         __source: {
             fileName: "src/graphics/Game.tsx",
-            lineNumber: 82,
+            lineNumber: 83,
             columnNumber: 5
         },
         __self: this
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(InfoBox, {
         __source: {
             fileName: "src/graphics/Game.tsx",
-            lineNumber: 83,
+            lineNumber: 84,
             columnNumber: 6
         },
         __self: this
@@ -265,7 +265,7 @@ function Game() {
         maxWidth: FullWidth,
         __source: {
             fileName: "src/graphics/Game.tsx",
-            lineNumber: 84,
+            lineNumber: 85,
             columnNumber: 7
         },
         __self: this
@@ -277,7 +277,7 @@ function Game() {
         secondaryWidth: ScoreWidth,
         __source: {
             fileName: "src/graphics/Game.tsx",
-            lineNumber: 86,
+            lineNumber: 87,
             columnNumber: 6
         },
         __self: this
@@ -289,7 +289,7 @@ function Game() {
         secondaryWidth: ScoreWidth,
         __source: {
             fileName: "src/graphics/Game.tsx",
-            lineNumber: 87,
+            lineNumber: 88,
             columnNumber: 6
         },
         __self: this
@@ -297,14 +297,14 @@ function Game() {
         $show: showCommentary,
         __source: {
             fileName: "src/graphics/Game.tsx",
-            lineNumber: 89,
+            lineNumber: 90,
             columnNumber: 5
         },
         __self: this
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(InfoBox, {
         __source: {
             fileName: "src/graphics/Game.tsx",
-            lineNumber: 90,
+            lineNumber: 91,
             columnNumber: 6
         },
         __self: this
@@ -315,7 +315,7 @@ function Game() {
         maxWidth: FullWidth,
         __source: {
             fileName: "src/graphics/Game.tsx",
-            lineNumber: 91,
+            lineNumber: 92,
             columnNumber: 7
         },
         __self: this
@@ -329,7 +329,7 @@ function Game() {
         pronounsWidth: PronounsWidth,
         __source: {
             fileName: "src/graphics/Game.tsx",
-            lineNumber: 93,
+            lineNumber: 94,
             columnNumber: 6
         },
         __self: this
@@ -343,7 +343,7 @@ function Game() {
         pronounsWidth: PronounsWidth,
         __source: {
             fileName: "src/graphics/Game.tsx",
-            lineNumber: 94,
+            lineNumber: 95,
             columnNumber: 6
         },
         __self: this
@@ -385,7 +385,7 @@ const root = (0, _client.createRoot)(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _reactDefault.default).createElement(Game, {
     __source: {
         fileName: "src/graphics/Game.tsx",
-        lineNumber: 124,
+        lineNumber: 125,
         columnNumber: 13
     },
     __self: undefined
@@ -471,22 +471,29 @@ const GameScoreInfoBox = ({ team, score, color, mainWidth, secondaryWidth })=>{
             columnNumber: 5
         },
         __self: undefined
-    }), /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _fittedText.FittedText), {
-        text: team,
-        font: "Genty Sans",
-        align: "left",
-        maxWidth: mainWidth - paddingWidth - colorDisplayWidth - colorMargin,
+    }), /*#__PURE__*/ (0, _reactDefault.default).createElement(TextWrapper, {
         __source: {
             fileName: "src/graphics/components/GameScoreInfoBox.tsx",
             lineNumber: 24,
             columnNumber: 5
         },
         __self: undefined
-    })), /*#__PURE__*/ (0, _reactDefault.default).createElement(ScoreBox, {
+    }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _fittedText.FittedText), {
+        text: team,
+        font: "Genty Sans",
+        align: "left",
+        maxWidth: mainWidth - paddingWidth - colorDisplayWidth - colorMargin,
+        __source: {
+            fileName: "src/graphics/components/GameScoreInfoBox.tsx",
+            lineNumber: 25,
+            columnNumber: 6
+        },
+        __self: undefined
+    }))), /*#__PURE__*/ (0, _reactDefault.default).createElement(ScoreBox, {
         $width: secondaryWidth,
         __source: {
             fileName: "src/graphics/components/GameScoreInfoBox.tsx",
-            lineNumber: 26,
+            lineNumber: 28,
             columnNumber: 4
         },
         __self: undefined
@@ -497,7 +504,7 @@ const GameScoreInfoBox = ({ team, score, color, mainWidth, secondaryWidth })=>{
         maxWidth: secondaryWidth - 5,
         __source: {
             fileName: "src/graphics/components/GameScoreInfoBox.tsx",
-            lineNumber: 27,
+            lineNumber: 29,
             columnNumber: 5
         },
         __self: undefined
@@ -513,7 +520,7 @@ const TeamBox = (0, _styledComponentsDefault.default).div.withConfig({
     displayName: "GameScoreInfoBox__TeamBox",
     componentId: "sc-6jms3o-1"
 })([
-    "position:relative;height:100%;padding:5px;width:",
+    "position:relative;height:100%;padding-right:5px;width:",
     "px;display:flex;flex-direction:row;align-items:center;box-sizing:border-box;"
 ], ({ $width })=>$width);
 const ColorDisplay = (0, _styledComponentsDefault.default).div.withConfig({
@@ -522,13 +529,18 @@ const ColorDisplay = (0, _styledComponentsDefault.default).div.withConfig({
 })([
     "width:",
     "px;min-width:",
-    "px;margin-right:",
-    "px;height:100%;border-radius:5px;background-color:",
+    "px;height:100%;border-top-left-radius:5px;border-bottom-left-radius:5px;background-color:",
     ";"
-], colorDisplayWidth, colorDisplayWidth, colorMargin, ({ $color })=>$color);
+], colorDisplayWidth, colorDisplayWidth, ({ $color })=>$color);
+const TextWrapper = (0, _styledComponentsDefault.default).div.withConfig({
+    displayName: "GameScoreInfoBox__TextWrapper",
+    componentId: "sc-6jms3o-3"
+})([
+    "position:relative;display:flex;align-items:center;width:100%;height:100%;border-left:3px solid white;padding-left:5px;"
+]);
 const ScoreBox = (0, _styledComponentsDefault.default).div.withConfig({
     displayName: "GameScoreInfoBox__ScoreBox",
-    componentId: "sc-6jms3o-3"
+    componentId: "sc-6jms3o-4"
 })([
     "display:flex;align-items:center;justify-content:center;width:",
     "px;height:100%;font-size:3rem;color:var(--game-sub-text);background-color:var(--game-sub-bg);border-left:4px solid var(--game-border);border-radius:0 4px 4px 0;"
