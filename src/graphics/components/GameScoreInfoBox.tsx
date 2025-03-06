@@ -19,7 +19,9 @@ export const GameScoreInfoBox: React.FC<GameTeamScoreBoxProps> = ({ team, score,
 		<TeamAndScore>
 			<TeamBox $width={mainWidth}>
 				<ColorDisplay $color={color} />
-				<FittedText text={team} font="Genty Sans" align="left" maxWidth={mainWidth - paddingWidth - colorDisplayWidth - colorMargin} />
+				<TextWrapper>
+					<FittedText text={team} font="Genty Sans" align="left" maxWidth={mainWidth - paddingWidth - colorDisplayWidth - colorMargin} />
+				</TextWrapper>
 			</TeamBox>
 			<ScoreBox $width={secondaryWidth}>
 				<FittedText text={`${score}`} font="Genty Sans" align="center" maxWidth={secondaryWidth - 5} />
@@ -46,7 +48,7 @@ const TeamAndScore = styled.div`
 const TeamBox = styled.div<{ $width: number }>`
 	position: relative;
 	height: 100%;
-	padding: 5px;
+	padding-right: 5px;
 	width: ${({ $width }) => $width}px;
 	display: flex;
 	flex-direction: row;
@@ -58,11 +60,21 @@ const TeamBox = styled.div<{ $width: number }>`
 const ColorDisplay = styled.div<{ $color: string }>`
 	width: ${colorDisplayWidth}px;
 	min-width: ${colorDisplayWidth}px;
-	margin-right: ${colorMargin}px;
 	height: 100%;
 	
-	border-radius: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
 	background-color: ${({ $color }) => $color};
+`;
+
+const TextWrapper = styled.div`
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	border-left: 3px solid white;
+	padding-left: 5px;
 `;
 
 const ScoreBox = styled.div<{ $width: number }>`

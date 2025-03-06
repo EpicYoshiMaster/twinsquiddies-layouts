@@ -1,5 +1,4 @@
 :root {
-	--primary: #aad0dd;
 	/* Break Screen */
 
 	--break-title-text: #ea2c12;
@@ -46,11 +45,6 @@
 
 	--commentary-pronouns: #ffffff;
 	/*--commentary-pronouns-outline: #000000;*/
-
-	--contrast: #4c4b99;
-	--alt-contrast: #ffffff;
-
-	--secondary: #659ac9;
 
 	/* Game */
 	--game-title-text: #ffffff;

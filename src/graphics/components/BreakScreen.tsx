@@ -4,7 +4,8 @@ import { createRoot } from 'react-dom/client';
 import { Background } from './Background';
 import { YoutubeLogo, DiscordLogo, TwitterLogo, Butterfly  } from "@phosphor-icons/react";
 import { useReplicant } from '@nodecg/react-hooks';
-import { EventData, Socials, EventInfo } from 'schemas';
+import { EventData, EventInfo } from 'schemas/eventData';
+import { Socials } from 'schemas/socials';
 import { CarouselComponent } from './CarouselComponent';
 import { OutlinedText } from './OutlinedText'
 

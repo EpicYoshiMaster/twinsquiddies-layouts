@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client';
 import { Omnibar } from './components/Omnibar';
 import { Background } from './components/Background';
 import { useReplicant } from '@nodecg/react-hooks';
-import { MatchData } from 'schemas';
+import { MatchData } from 'schemas/matchData';
 import { TeamScoreBox } from './components/TeamScoreBox';
 
 export function Intermission() {
