@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import styled from 'styled-components'
 import { CarouselComponent } from './CarouselComponent';
-import { YoutubeLogo, DiscordLogo, TwitterLogo, Butterfly } from "@phosphor-icons/react";
 import { EventData, EventInfo } from 'schemas/eventData';
 import { Socials } from 'schemas/socials';
 import { useReplicant } from '@nodecg/react-hooks';
 import { IntermissionData } from 'schemas/intermissionData';
-import { formatDateHM, formatDateMDY, getSocialPlatformIcon } from '../../helpers/utils'
+import { formatDateHM, formatDateMDY, getSocialPlatformIcon } from '../../helpers/utils';
 
 export const Omnibar: React.FC = () => {
 	const [eventData, setEventData] = useReplicant<EventData>('eventData', { bundle: 'squidwest-layout-controls'});
