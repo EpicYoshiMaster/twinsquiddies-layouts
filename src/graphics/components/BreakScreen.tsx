@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import styled from 'styled-components'
-import { createRoot } from 'react-dom/client';
 import { Background } from './Background';
-import { YoutubeLogo, DiscordLogo, TwitterLogo, Butterfly  } from "@phosphor-icons/react";
 import { useReplicant } from '@nodecg/react-hooks';
 import { EventData, EventInfo } from 'schemas/eventData';
 import { Socials } from 'schemas/socials';
 import { CarouselComponent } from './CarouselComponent';
 import { OutlinedText } from './OutlinedText'
+import { getSocialPlatformIcon } from '../../helpers/utils';
 
 interface BreakScreenProps {
 	message: string;
@@ -55,40 +54,19 @@ export const BreakScreen: React.FC<BreakScreenProps> = ({ message }) => {
 					<Columns>
 						<SocialsColumn>
 							<CarouselComponent speed={10000} transitionSpeed={2000}>
-								<SocialsArea>
-									<SocialsTitle>
-										<OutlinedText text="Follow Twin Squiddies!" outlines={SocialTitleOutline} />
-									</SocialsTitle>
-									<SocialsItem>
-										<Butterfly />
-										<OutlinedText text="@twinsquiddies.bsky.social" outlines={SocialTextOutline} />
-									</SocialsItem>
-									<SocialsItem>
-										<DiscordLogo />
-										<OutlinedText text="discord.gg/LCL" outlines={SocialTextOutline} />
-									</SocialsItem>
-								</SocialsArea>
-								<SocialsArea>
-									<SocialsTitle>
-										<OutlinedText text="Follow SquidWest!" outlines={SocialTitleOutline} />
-									</SocialsTitle>
-									<SocialsItem>
-										<YoutubeLogo />
-										<OutlinedText text={socials ? socials.youtube : ""} outlines={SocialTextOutline} />
-									</SocialsItem>
-									<SocialsItem>
-										<TwitterLogo />
-										<OutlinedText text={socials ? socials.twitter : ""} outlines={SocialTextOutline} />
-									</SocialsItem>
-									<SocialsItem>
-										<Butterfly />
-										<OutlinedText text={socials ? socials.bluesky : ""} outlines={SocialTextOutline} />
-									</SocialsItem>
-									<SocialsItem>
-										<DiscordLogo />
-										<OutlinedText text={socials ? socials.discord : ""} outlines={SocialTextOutline} />
-									</SocialsItem>
-								</SocialsArea>
+								{socials && socials.map((group, groupIndex) => (
+									<SocialsArea key={groupIndex}>
+										<SocialsTitle>
+											<OutlinedText text={`Follow ${group.name}!`} outlines={SocialTitleOutline} />
+										</SocialsTitle>
+										{group.items.map((entry, entryIndex) => (
+											<SocialsItem key={entryIndex}>
+												{getSocialPlatformIcon(entry.platform)}
+												<OutlinedText text={entry.social} outlines={SocialTextOutline} />
+											</SocialsItem>
+										))}
+									</SocialsArea>
+								))}
 							</CarouselComponent>
 						</SocialsColumn>
 						<SquidwestRow>
