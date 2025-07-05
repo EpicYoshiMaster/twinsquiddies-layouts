@@ -170,11 +170,6 @@ const defaultMatchData = {
     },
     swapColor: false
 };
-const defaultCommentator = {
-    name: "Commentator Name",
-    pronouns: "any/all",
-    tag: "@TagName"
-};
 const FullWidth = 340;
 const TeamWidth = 300;
 const ScoreWidth = 50;
@@ -185,16 +180,9 @@ function Game() {
         bundle: "squidwest-layout-controls"
     });
     const [matchData] = (0, _hooks.useWrappedReplicant)("match", defaultMatchData, "squidwest-layout-controls");
-    const [comms] = (0, _reactHooks.useReplicant)("commentators", {
+    const [commentatorList] = (0, _reactHooks.useReplicant)("commentatorList", {
         bundle: "squidwest-layout-controls",
-        defaultValue: {
-            commentatorOne: defaultCommentator,
-            commentatorTwo: defaultCommentator,
-            autoShow: true,
-            delay: 3000,
-            autoHide: true,
-            lifetime: 5000
-        }
+        defaultValue: []
     });
     const [currentEvent, setCurrentEvent] = (0, _react.useState)({
         name: "Current Event Name",
@@ -202,15 +190,6 @@ function Game() {
         number: 1,
         date: "Today"
     });
-    const [commentatorOne, setCommentatorOne] = (0, _react.useState)(defaultCommentator);
-    const [commentatorTwo, setCommentatorTwo] = (0, _react.useState)(defaultCommentator);
-    (0, _react.useEffect)(()=>{
-        if (!comms) return;
-        setCommentatorOne(comms.commentatorOne);
-        setCommentatorTwo(comms.commentatorTwo);
-    }, [
-        comms
-    ]);
     (0, _react.useEffect)(()=>{
         if (!eventData) return;
         setCurrentEvent(eventData.currentEvent);
@@ -232,14 +211,14 @@ function Game() {
     return /*#__PURE__*/ (0, _reactDefault.default).createElement(StyledOmnibarOnly, {
         __source: {
             fileName: "src/graphics/Game.tsx",
-            lineNumber: 81,
+            lineNumber: 62,
             columnNumber: 10
         },
         __self: this
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(Content, {
         __source: {
             fileName: "src/graphics/Game.tsx",
-            lineNumber: 82,
+            lineNumber: 63,
             columnNumber: 4
         },
         __self: this
@@ -247,14 +226,14 @@ function Game() {
         $show: showScoreboard,
         __source: {
             fileName: "src/graphics/Game.tsx",
-            lineNumber: 83,
+            lineNumber: 64,
             columnNumber: 5
         },
         __self: this
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(InfoBox, {
         __source: {
             fileName: "src/graphics/Game.tsx",
-            lineNumber: 84,
+            lineNumber: 65,
             columnNumber: 6
         },
         __self: this
@@ -265,7 +244,7 @@ function Game() {
         maxWidth: FullWidth,
         __source: {
             fileName: "src/graphics/Game.tsx",
-            lineNumber: 85,
+            lineNumber: 66,
             columnNumber: 7
         },
         __self: this
@@ -277,7 +256,7 @@ function Game() {
         secondaryWidth: ScoreWidth,
         __source: {
             fileName: "src/graphics/Game.tsx",
-            lineNumber: 87,
+            lineNumber: 68,
             columnNumber: 6
         },
         __self: this
@@ -289,7 +268,7 @@ function Game() {
         secondaryWidth: ScoreWidth,
         __source: {
             fileName: "src/graphics/Game.tsx",
-            lineNumber: 88,
+            lineNumber: 69,
             columnNumber: 6
         },
         __self: this
@@ -297,14 +276,14 @@ function Game() {
         $show: showCommentary,
         __source: {
             fileName: "src/graphics/Game.tsx",
-            lineNumber: 90,
+            lineNumber: 71,
             columnNumber: 5
         },
         __self: this
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(InfoBox, {
         __source: {
             fileName: "src/graphics/Game.tsx",
-            lineNumber: 91,
+            lineNumber: 72,
             columnNumber: 6
         },
         __self: this
@@ -315,39 +294,26 @@ function Game() {
         maxWidth: FullWidth,
         __source: {
             fileName: "src/graphics/Game.tsx",
-            lineNumber: 92,
+            lineNumber: 73,
             columnNumber: 7
         },
         __self: this
-    })), /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _gameCommentatorInfoBox.GameCommentatorInfoBox), {
-        name: commentatorOne.name,
-        pronouns: commentatorOne.pronouns,
-        tag: commentatorOne.tag,
-        playing: showCommentary,
-        fullWidth: FullWidth,
-        nameWidth: CommentatorWidth,
-        pronounsWidth: PronounsWidth,
-        __source: {
-            fileName: "src/graphics/Game.tsx",
-            lineNumber: 94,
-            columnNumber: 6
-        },
-        __self: this
-    }), /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _gameCommentatorInfoBox.GameCommentatorInfoBox), {
-        name: commentatorTwo.name,
-        pronouns: commentatorTwo.pronouns,
-        tag: commentatorTwo.tag,
-        playing: showCommentary,
-        fullWidth: FullWidth,
-        nameWidth: CommentatorWidth,
-        pronounsWidth: PronounsWidth,
-        __source: {
-            fileName: "src/graphics/Game.tsx",
-            lineNumber: 95,
-            columnNumber: 6
-        },
-        __self: this
-    }))));
+    })), commentatorList && commentatorList.map((commentator, index)=>/*#__PURE__*/ (0, _reactDefault.default).createElement((0, _gameCommentatorInfoBox.GameCommentatorInfoBox), {
+            key: index,
+            name: commentator.name,
+            pronouns: commentator.pronouns,
+            tag: commentator.tag,
+            playing: showCommentary,
+            fullWidth: FullWidth,
+            nameWidth: CommentatorWidth,
+            pronounsWidth: PronounsWidth,
+            __source: {
+                fileName: "src/graphics/Game.tsx",
+                lineNumber: 75,
+                columnNumber: 70
+            },
+            __self: this
+        })))));
 }
 const StyledOmnibarOnly = (0, _styledComponentsDefault.default).div.withConfig({
     displayName: "Game__StyledOmnibarOnly",
@@ -385,7 +351,7 @@ const root = (0, _client.createRoot)(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _reactDefault.default).createElement(Game, {
     __source: {
         fileName: "src/graphics/Game.tsx",
-        lineNumber: 125,
+        lineNumber: 105,
         columnNumber: 13
     },
     __self: undefined

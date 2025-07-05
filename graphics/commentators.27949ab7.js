@@ -159,43 +159,30 @@ var LoadState;
     LoadState[LoadState["LS_Loaded"] = 1] = "LS_Loaded";
     LoadState[LoadState["LS_Done"] = 2] = "LS_Done";
 })(LoadState || (LoadState = {}));
-const defaultCommentator = {
-    name: "Commentator Name",
-    pronouns: "any/all",
-    tag: "@TagName"
-};
 const AnimationDuration = 1000;
 function Commentators() {
     const [show, setShow] = (0, _react.useState)(false);
     const [loaded, setLoaded] = (0, _react.useState)(0);
-    const [comms, setComms] = (0, _reactHooks.useReplicant)("commentators", {
+    const [commentatorList] = (0, _reactHooks.useReplicant)("commentatorList", {
+        bundle: "squidwest-layout-controls",
+        defaultValue: []
+    });
+    const [settings] = (0, _reactHooks.useReplicant)("commentatorSettings", {
         bundle: "squidwest-layout-controls",
         defaultValue: {
-            commentatorOne: defaultCommentator,
-            commentatorTwo: defaultCommentator,
             autoShow: true,
             delay: 3000,
             autoHide: true,
             lifetime: 5000
         }
     });
-    const [commentatorOne, setCommentatorOne] = (0, _react.useState)(defaultCommentator);
-    const [commentatorTwo, setCommentatorTwo] = (0, _react.useState)(defaultCommentator);
-    const [autoShow, setAutoShow] = (0, _react.useState)(false);
-    const [delay, setDelay] = (0, _react.useState)(3000);
-    const [autoHide, setAutoHide] = (0, _react.useState)(false);
-    const [lifetime, setLifetime] = (0, _react.useState)(5000);
     (0, _react.useEffect)(()=>{
-        if (!comms) return;
-        setCommentatorOne(comms.commentatorOne);
-        setCommentatorTwo(comms.commentatorTwo);
-        setAutoShow(comms.autoShow);
-        setDelay(comms.delay);
-        setAutoHide(comms.autoHide);
-        setLifetime(comms.lifetime);
+        if (!commentatorList) return;
+        if (!settings) return;
         if (loaded === 0) setLoaded(1);
     }, [
-        comms
+        commentatorList,
+        settings
     ]);
     const onAutoHide = (0, _react.useCallback)(()=>{
         setShow(false);
@@ -203,13 +190,13 @@ function Commentators() {
         setShow
     ]);
     const setCurrentShow = (0, _react.useCallback)((newShow)=>{
-        if (newShow && autoHide) window.setTimeout(onAutoHide, Math.max(AnimationDuration + lifetime, AnimationDuration));
+        if (!settings) return;
+        if (newShow && settings.autoHide) window.setTimeout(onAutoHide, Math.max(AnimationDuration + settings.lifetime, AnimationDuration));
         setShow(newShow);
     }, [
         setShow,
         onAutoHide,
-        autoHide,
-        lifetime
+        settings
     ]);
     const onAutoShow = (0, _react.useCallback)(()=>{
         setCurrentShow(true);
@@ -230,76 +217,57 @@ function Commentators() {
         onCommsControl
     ]);
     (0, _react.useEffect)(()=>{
-        if (loaded === 1) {
-            if (autoShow) window.setTimeout(onAutoShow, Math.max(delay, 0));
+        if (settings && loaded === 1) {
+            if (settings.autoShow) window.setTimeout(onAutoShow, Math.max(settings.delay, 0));
             setLoaded(2);
         }
     }, [
         loaded,
-        autoShow,
-        delay,
+        settings,
         onAutoShow
     ]);
     return /*#__PURE__*/ (0, _reactDefault.default).createElement(StyledCommentators, {
         __source: {
             fileName: "src/graphics/Commentators.tsx",
-            lineNumber: 81,
+            lineNumber: 68,
             columnNumber: 10
         },
         __self: this
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(Content, {
         __source: {
             fileName: "src/graphics/Commentators.tsx",
-            lineNumber: 82,
+            lineNumber: 69,
             columnNumber: 4
         },
         __self: this
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(LowerThirds, {
         __source: {
             fileName: "src/graphics/Commentators.tsx",
-            lineNumber: 83,
+            lineNumber: 70,
             columnNumber: 5
         },
         __self: this
-    }, /*#__PURE__*/ (0, _reactDefault.default).createElement(NameplateLeft, {
-        __source: {
-            fileName: "src/graphics/Commentators.tsx",
-            lineNumber: 84,
-            columnNumber: 6
-        },
-        __self: this
-    }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _nameplate.Nameplate), {
-        show: show,
-        name: commentatorOne.name,
-        pronouns: commentatorOne.pronouns,
-        tag: commentatorOne.tag,
-        animationLength: AnimationDuration,
-        __source: {
-            fileName: "src/graphics/Commentators.tsx",
-            lineNumber: 85,
-            columnNumber: 7
-        },
-        __self: this
-    })), /*#__PURE__*/ (0, _reactDefault.default).createElement(NameplateRight, {
-        __source: {
-            fileName: "src/graphics/Commentators.tsx",
-            lineNumber: 87,
-            columnNumber: 6
-        },
-        __self: this
-    }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _nameplate.Nameplate), {
-        show: show,
-        name: commentatorTwo.name,
-        pronouns: commentatorTwo.pronouns,
-        tag: commentatorTwo.tag,
-        animationLength: AnimationDuration,
-        __source: {
-            fileName: "src/graphics/Commentators.tsx",
-            lineNumber: 88,
-            columnNumber: 7
-        },
-        __self: this
-    })))));
+    }, commentatorList && commentatorList.map((commentator, index)=>/*#__PURE__*/ (0, _reactDefault.default).createElement(NameplateWrapper, {
+            key: index,
+            __source: {
+                fileName: "src/graphics/Commentators.tsx",
+                lineNumber: 71,
+                columnNumber: 70
+            },
+            __self: this
+        }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _nameplate.Nameplate), {
+            show: show,
+            name: commentator.name,
+            pronouns: commentator.pronouns,
+            tag: commentator.tag,
+            animationLength: AnimationDuration,
+            __source: {
+                fileName: "src/graphics/Commentators.tsx",
+                lineNumber: 72,
+                columnNumber: 8
+            },
+            __self: this
+        }))))));
 }
 const StyledCommentators = (0, _styledComponentsDefault.default).div.withConfig({
     displayName: "Commentators__StyledCommentators",
@@ -317,25 +285,19 @@ const LowerThirds = (0, _styledComponentsDefault.default).div.withConfig({
     displayName: "Commentators__LowerThirds",
     componentId: "sc-395uqo-2"
 })([
-    "position:relative;margin-bottom:50px;display:grid;grid-template-columns:1fr 1fr;"
+    "position:relative;margin-bottom:50px;display:flex;justify-content:space-evenly;"
 ]);
-const NameplateLeft = (0, _styledComponentsDefault.default).div.withConfig({
-    displayName: "Commentators__NameplateLeft",
+const NameplateWrapper = (0, _styledComponentsDefault.default).div.withConfig({
+    displayName: "Commentators__NameplateWrapper",
     componentId: "sc-395uqo-3"
 })([
-    "position:relative;margin:20px 100px 20px 200px;"
-]);
-const NameplateRight = (0, _styledComponentsDefault.default).div.withConfig({
-    displayName: "Commentators__NameplateRight",
-    componentId: "sc-395uqo-4"
-})([
-    "position:relative;margin:20px 200px 20px 100px;"
+    "margin:20px 0;"
 ]);
 const root = (0, _client.createRoot)(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _reactDefault.default).createElement(Commentators, {
     __source: {
         fileName: "src/graphics/Commentators.tsx",
-        lineNumber: 115,
+        lineNumber: 95,
         columnNumber: 13
     },
     __self: undefined

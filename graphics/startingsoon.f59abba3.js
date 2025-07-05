@@ -195,10 +195,10 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _styledComponents = require("styled-components");
 var _styledComponentsDefault = parcelHelpers.interopDefault(_styledComponents);
 var _background = require("./Background");
-var _react1 = require("@phosphor-icons/react");
 var _reactHooks = require("@nodecg/react-hooks");
 var _carouselComponent = require("./CarouselComponent");
 var _outlinedText = require("./OutlinedText");
+var _utils = require("../../helpers/utils");
 const TitleOutline = [
     {
         width: "15px",
@@ -245,42 +245,42 @@ const BreakScreen = ({ message })=>{
     return /*#__PURE__*/ (0, _reactDefault.default).createElement(StyledBreakScreen, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 49,
+            lineNumber: 48,
             columnNumber: 10
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _background.Background), {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 50,
+            lineNumber: 49,
             columnNumber: 4
         },
         __self: undefined
     }), /*#__PURE__*/ (0, _reactDefault.default).createElement(Content, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 51,
+            lineNumber: 50,
             columnNumber: 4
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(Rows, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 52,
+            lineNumber: 51,
             columnNumber: 5
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(EventSection, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 53,
+            lineNumber: 52,
             columnNumber: 6
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(TitleText, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 54,
+            lineNumber: 53,
             columnNumber: 7
         },
         __self: undefined
@@ -289,14 +289,14 @@ const BreakScreen = ({ message })=>{
         outlines: TitleOutline,
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 55,
+            lineNumber: 54,
             columnNumber: 8
         },
         __self: undefined
     })), /*#__PURE__*/ (0, _reactDefault.default).createElement(SubtitleText, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 57,
+            lineNumber: 56,
             columnNumber: 7
         },
         __self: undefined
@@ -305,21 +305,21 @@ const BreakScreen = ({ message })=>{
         outlines: SubtitleOutline,
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 58,
+            lineNumber: 57,
             columnNumber: 8
         },
         __self: undefined
     }))), /*#__PURE__*/ (0, _reactDefault.default).createElement(Columns, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 61,
+            lineNumber: 60,
             columnNumber: 6
         },
         __self: undefined
     }, /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsColumn, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 62,
+            lineNumber: 61,
             columnNumber: 7
         },
         __self: undefined
@@ -328,198 +328,55 @@ const BreakScreen = ({ message })=>{
         transitionSpeed: 2000,
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 63,
+            lineNumber: 62,
             columnNumber: 8
         },
         __self: undefined
-    }, /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsArea, {
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 64,
-            columnNumber: 9
-        },
-        __self: undefined
-    }, /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsTitle, {
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 65,
-            columnNumber: 10
-        },
-        __self: undefined
-    }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _outlinedText.OutlinedText), {
-        text: "Follow Twin Squiddies!",
-        outlines: SocialTitleOutline,
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 66,
-            columnNumber: 11
-        },
-        __self: undefined
-    })), /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsItem, {
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 68,
-            columnNumber: 10
-        },
-        __self: undefined
-    }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _react1.Butterfly), {
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 69,
-            columnNumber: 11
-        },
-        __self: undefined
-    }), /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _outlinedText.OutlinedText), {
-        text: "@twinsquiddies.bsky.social",
-        outlines: SocialTextOutline,
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 70,
-            columnNumber: 11
-        },
-        __self: undefined
-    })), /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsItem, {
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 72,
-            columnNumber: 10
-        },
-        __self: undefined
-    }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _react1.DiscordLogo), {
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 73,
-            columnNumber: 11
-        },
-        __self: undefined
-    }), /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _outlinedText.OutlinedText), {
-        text: "discord.gg/LCL",
-        outlines: SocialTextOutline,
+    }, socials && socials.map((group, groupIndex)=>/*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsArea, {
+            key: groupIndex,
+            __source: {
+                fileName: "src/graphics/components/BreakScreen.tsx",
+                lineNumber: 63,
+                columnNumber: 56
+            },
+            __self: undefined
+        }, /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsTitle, {
+            __source: {
+                fileName: "src/graphics/components/BreakScreen.tsx",
+                lineNumber: 64,
+                columnNumber: 11
+            },
+            __self: undefined
+        }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _outlinedText.OutlinedText), {
+            text: `Follow ${group.name}!`,
+            outlines: SocialTitleOutline,
+            __source: {
+                fileName: "src/graphics/components/BreakScreen.tsx",
+                lineNumber: 65,
+                columnNumber: 12
+            },
+            __self: undefined
+        })), group.items.map((entry, entryIndex)=>/*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsItem, {
+                key: entryIndex,
+                __source: {
+                    fileName: "src/graphics/components/BreakScreen.tsx",
+                    lineNumber: 67,
+                    columnNumber: 51
+                },
+                __self: undefined
+            }, (0, _utils.getSocialPlatformIcon)(entry.platform), /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _outlinedText.OutlinedText), {
+                text: entry.social,
+                outlines: SocialTextOutline,
+                __source: {
+                    fileName: "src/graphics/components/BreakScreen.tsx",
+                    lineNumber: 69,
+                    columnNumber: 13
+                },
+                __self: undefined
+            }))))))), /*#__PURE__*/ (0, _reactDefault.default).createElement(SquidwestRow, {
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
             lineNumber: 74,
-            columnNumber: 11
-        },
-        __self: undefined
-    }))), /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsArea, {
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 77,
-            columnNumber: 9
-        },
-        __self: undefined
-    }, /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsTitle, {
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 78,
-            columnNumber: 10
-        },
-        __self: undefined
-    }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _outlinedText.OutlinedText), {
-        text: "Follow SquidWest!",
-        outlines: SocialTitleOutline,
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 79,
-            columnNumber: 11
-        },
-        __self: undefined
-    })), /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsItem, {
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 81,
-            columnNumber: 10
-        },
-        __self: undefined
-    }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _react1.YoutubeLogo), {
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 82,
-            columnNumber: 11
-        },
-        __self: undefined
-    }), /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _outlinedText.OutlinedText), {
-        text: socials ? socials.youtube : "",
-        outlines: SocialTextOutline,
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 83,
-            columnNumber: 11
-        },
-        __self: undefined
-    })), /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsItem, {
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 85,
-            columnNumber: 10
-        },
-        __self: undefined
-    }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _react1.TwitterLogo), {
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 86,
-            columnNumber: 11
-        },
-        __self: undefined
-    }), /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _outlinedText.OutlinedText), {
-        text: socials ? socials.twitter : "",
-        outlines: SocialTextOutline,
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 87,
-            columnNumber: 11
-        },
-        __self: undefined
-    })), /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsItem, {
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 89,
-            columnNumber: 10
-        },
-        __self: undefined
-    }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _react1.Butterfly), {
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 90,
-            columnNumber: 11
-        },
-        __self: undefined
-    }), /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _outlinedText.OutlinedText), {
-        text: socials ? socials.bluesky : "",
-        outlines: SocialTextOutline,
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 91,
-            columnNumber: 11
-        },
-        __self: undefined
-    })), /*#__PURE__*/ (0, _reactDefault.default).createElement(SocialsItem, {
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 93,
-            columnNumber: 10
-        },
-        __self: undefined
-    }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _react1.DiscordLogo), {
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 94,
-            columnNumber: 11
-        },
-        __self: undefined
-    }), /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _outlinedText.OutlinedText), {
-        text: socials ? socials.discord : "",
-        outlines: SocialTextOutline,
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 95,
-            columnNumber: 11
-        },
-        __self: undefined
-    }))))), /*#__PURE__*/ (0, _reactDefault.default).createElement(SquidwestRow, {
-        __source: {
-            fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 100,
             columnNumber: 7
         },
         __self: undefined
@@ -528,7 +385,7 @@ const BreakScreen = ({ message })=>{
         alt: "SquidWest Logo",
         __source: {
             fileName: "src/graphics/components/BreakScreen.tsx",
-            lineNumber: 101,
+            lineNumber: 75,
             columnNumber: 8
         },
         __self: undefined
@@ -613,7 +470,7 @@ const Logo = (0, _styledComponentsDefault.default).img.withConfig({
     "height:140px;margin-right:20px;"
 ]);
 
-},{"react":"bH1AQ","styled-components":"9xpRL","./Background":"n2E1c","@phosphor-icons/react":"h9z2e","@nodecg/react-hooks":"audz3","./CarouselComponent":"3ZV6n","./OutlinedText":"1O3pZ","@parcel/transformer-js/src/esmodule-helpers.js":"hvLRG"}],"n2E1c":[function(require,module,exports) {
+},{"react":"bH1AQ","styled-components":"9xpRL","./Background":"n2E1c","@nodecg/react-hooks":"audz3","./CarouselComponent":"3ZV6n","./OutlinedText":"1O3pZ","@parcel/transformer-js/src/esmodule-helpers.js":"hvLRG","../../helpers/utils":"9zR4Y"}],"n2E1c":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Background", ()=>Background);
